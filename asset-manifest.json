@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/singh-anita/react-context/static/css/main.aaa72eef.css",
+    "main.js": "/singh-anita/react-context/static/js/main.8e03d702.js",
+    "static/js/787.03a9981b.chunk.js": "/singh-anita/react-context/static/js/787.03a9981b.chunk.js",
+    "index.html": "/singh-anita/react-context/index.html",
+    "main.aaa72eef.css.map": "/singh-anita/react-context/static/css/main.aaa72eef.css.map",
+    "main.8e03d702.js.map": "/singh-anita/react-context/static/js/main.8e03d702.js.map",
+    "787.03a9981b.chunk.js.map": "/singh-anita/react-context/static/js/787.03a9981b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aaa72eef.css",
+    "static/js/main.8e03d702.js"
+  ]
+}
