@@ -1,0 +1,55 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0px auto;
+  /* border: 2px solid red; */
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.navBar li {
+  text-decoration: none;
+  list-style: none;
+  display: inline;
+  padding: 10px;
+}
+
+.navBarLight {
+  background-color: white;
+  color: black;
+}
+
+.navBarDark {
+  background-color: black;
+  color: white;
+  border: 2px solid red;
+}
+
+.navLink {
+  border-bottom: "3px solid none";
+}
+
+.navLink a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+/* .navLink :hover {
+  border-bottom: "3px solid black";
+} */
+
+.navLinkDark {
+  border-bottom: "1px solid none";
+}
+
+.navLinkDark:hover {
+  border-bottom: "1px solid white";
+}
