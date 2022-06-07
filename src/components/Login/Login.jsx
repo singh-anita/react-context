@@ -24,7 +24,6 @@ const Login = () => {
       ...input,
       [e.currentTarget.name]: e.currentTarget.value,
     });
-    // console.log(formErrors[e.currentTarget.name])
   };
 
   const findFormErrors = () => {
@@ -44,34 +43,30 @@ const Login = () => {
       errors.password = "Password is required";
     } else if (input?.password.trim().length < 8)
       errors.password = "Password should be greater than 8";
-      
-
-    setFormErrors(errors);
-
-    if (Object.keys(errors).length === 0) {
-      return true;
-    }
+  
     return errors;
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // console.log(isUserLogin);
+    console.log(isUserLogin);
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
     }
-    if (findFormErrors(input)) {
+
+    const errors = findFormErrors()
+    // console.log(findFormErrors(input))
+
+    if ( Object.keys(errors).length > 0 ) {
+      // We got errors!
+      setFormErrors(errors)
+    } else {
       console.log(input);
-      // setIsUserLogin(!isUserLogin)
       login()
-      navigate('/dashboard')
       setInput({ email: '', password: '' })
-    }
-    else {
-      // setShowMessage(true)
-      // setDisable(true)
+      navigate('/dashboard')
     }
   };
 
