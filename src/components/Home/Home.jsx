@@ -1,10 +1,17 @@
-const Home = () => {
-  return (
-    <div>
-      {" "}
-      <h1>Home component</h1>
-    </div>
-  );
-};
+import React from 'react'
+import { Container, Row } from 'react-bootstrap'
+import HeroBanner from '../HeroBanner'
 
-export default Home;
+const Home = () => {
+ return (
+    <>
+    <Container>
+      <Row>
+      <h2>This is home page !!</h2>
+      <HeroBanner />
+      </Row>
+    </Container>
+    </>
+  )
+}
+export default Home

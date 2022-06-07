@@ -34,6 +34,17 @@
 .dark{
   background-color: #8ab652;
 }
+.btn {
+  padding: 16px 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+.btn-secondary{
+  color: #000000;
+  background-color: #aec0e4;
+  border-color: #bdc1c9;
+  border-radius: 0.25rem;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
