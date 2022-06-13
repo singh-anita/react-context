@@ -19,7 +19,7 @@ const HeroBanner = () => {
           </Col>
           <Col xs={12} md={6} className="text-md-end d-md-block">
             <img
-              src="../logo521.png"
+              src="../../../public/image/press-page-social-sharing-image.png"
               alt="banner.png"
               class="jsx-1123434775 img-fluid main-image"
             />

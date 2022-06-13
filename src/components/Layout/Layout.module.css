@@ -1,0 +1,11 @@
+.dark {
+  background-color: rgb(77, 76, 76);
+  color: #fff;
+  
+}
+.dark a{
+  color: #fff !important;
+}
+.mainWrapper {
+  height: 100vh;
+}

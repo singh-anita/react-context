@@ -2,10 +2,13 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
 import { AuthContext } from "../../context/AuthContext";
+import { ThemeContext } from "../../context/ThemeContext";
 const { navBar, navigation, navLink } = styles;
 
 const Navigation = () => {
-  // const { theme, setTheme } = useContext(AuthContext);
+  const { themeChangeHandler } = useContext(ThemeContext);
+  // console.log("theme",theme)
+
   // const themeChangeHandler = () => {
   //   setTheme(!theme);
   // };
@@ -14,17 +17,16 @@ const Navigation = () => {
   return (
     <div className={navigation}>
       <nav className={navBar}>
-        {/* <ul className={theme === true ? "light" : "dark"}> */}
         <ul>
           <li className={navLink}>
             <Link to="/"> Home </Link>
           </li>
           {!useContextValue.isUserLogin && (
-          <li className={navLink}>
-            <Link to="/login" className="btn btn-secondary">
-              Login
-            </Link>
-          </li>
+            <li className={navLink}>
+              <Link to="/login">
+                Login
+              </Link>
+            </li>
           )}
           {/* <li className={navLink}>
             <Link to="/login">Login</Link>
@@ -36,8 +38,7 @@ const Navigation = () => {
       </nav>
       <div>
         <label htmlFor="theme">Dark Theme</label>
-        {/* <input type="checkbox" name="theme" onChange={themeChangeHandler} />
-        {console.log(theme)} */}
+        <input type="checkbox" name="theme" onChange={themeChangeHandler} />
       </div>
     </div>
   );

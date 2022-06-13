@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 // Context has been created
-const AuthContext = createContext(null)
+const AuthContext = createContext(false)
 // const ThemeContext = createContext({ dark: false , setTheme: () => {},});
 
 // Provider
@@ -21,7 +21,7 @@ const AuthContext = createContext(null)
 const AuthProvider = ({children}) => {
   const [isUserLogin, setIsUserLogin] = useState(false)
   const login = ()=>{
-    setIsUserLogin(!isUserLogin)
+    setIsUserLogin(true)
   }
   const logout = ()=>{
     setIsUserLogin(false)

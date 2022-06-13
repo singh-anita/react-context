@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { Button, Form, Col, Container, Row } from "react-bootstrap";
 
@@ -10,6 +10,10 @@ const Login = () => {
   console.log(useContextValue)
 
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log('location', location)
+  const { from } = location.state || {from : {pathname: '/dashboard'}}
+  console.log('from',from)
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -49,7 +53,7 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(isUserLogin);
+    console.log("isuserlogin",isUserLogin);
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
       e.preventDefault();
@@ -66,7 +70,7 @@ const Login = () => {
       console.log(input);
       login()
       setInput({ email: '', password: '' })
-      navigate('/dashboard')
+      navigate(from, { replace: true })
     }
   };
 
